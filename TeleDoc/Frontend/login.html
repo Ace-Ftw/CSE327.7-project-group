@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeleDoc Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <img src="Logo.png" alt="TeleDoc Logo" class="logo">
+    <h2>TeleDoc Login</h2>
+    <form action="#" method="post" id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      <label for="password">Password:</label>
+      <div class="password-field">
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()">
+        <label for="showPassword">Show Password</label>
+      </div>
+      <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+  </div>
+  <script>
+    function togglePasswordVisibility() {
+      var passwordField = document.getElementById("password");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>
